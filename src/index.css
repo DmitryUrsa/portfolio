@@ -25,6 +25,15 @@
   src: local('Roboto Regular'), local('Roboto-Regular'), url(./fonts/Roboto/Roboto-Regular.ttf) format('woff2');
 }
 
+/* Roboto Medium */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(./fonts/Roboto/Roboto-Medium.ttf) format('woff2');
+}
+
 /* Roboto Bold */
 @font-face {
   font-family: 'Roboto';
@@ -35,6 +44,7 @@
 }
 
 body {
+  background: #101010;
   margin: 0;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
