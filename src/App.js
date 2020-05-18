@@ -1,49 +1,34 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+
 import "./App.css";
-import Header from "./modules/Header";
+
+// Modules import
+import Header from "./modules/Header/Header";
+import Footer from "./modules/Footer/Footer";
+import Wrapper from "./modules/Wrapper";
+
+// Pages import
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import Project from "./pages/Project";
 
 export default class App extends Component {
   render() {
     return (
       <div className="app">
         <Header />
+        <Wrapper>
+          <Switch>
+            <Route exact path="/project/:slug" component={Project} />
+            <Route exact path="/about/" component={About} />
+            <Route exact path="/" component={Home} />
+            <Route component={Error} />
+          </Switch>
+        </Wrapper>
+        <Footer />
       </div>
     );
   }
 }
-
-// import React from "react";
-// import logo from "./logo.svg";
-// import "./App.css";
-
-// function App() {
-//   let state = {
-//     clicker: 0,
-//   };
-//   const clickerIncrease = () => {
-//     state.clicker++;
-//     console.log("click");
-//     console.log(state.clicker);
-//   };
-//   return (
-//     <div className="App">
-//       <header className="App-header" onClick={clickerIncrease}>
-//         <img src={logo} className="App-logo" alt="logo" />
-//         {state.clicker}
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

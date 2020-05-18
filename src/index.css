@@ -43,8 +43,17 @@
   src: local('Roboto Bold'), local('Roboto-Bold'), url(./fonts/Roboto/Roboto-Bold.ttf) format('woff2');
 }
 
+:root {
+  --lightyellow: #FFFCBF;
+  --whiteyellow: #FFE976;
+  --cyan: #03D6D2;
+  --blue: #046FDB;
+  --darkblue: #062D92;
+}
+
 body {
   background: #101010;
+  color: #ffffff;
   margin: 0;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,4 +63,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  color: var(--whiteyellow);
+  transition: all 300ms ease;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+ul {
+  padding-left: 2em;
+}
+
+.color-cyan {
+  color: var(--cyan);
+}
+
+@keyframes rotations {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

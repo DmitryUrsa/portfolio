@@ -1,0 +1,6 @@
+.main-header {
+  font-family: 'Roboto', sans-serif;
+  color: var(--lightyellow);
+  font-size: 2.25em;
+  text-transform: uppercase;
+}

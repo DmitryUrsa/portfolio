@@ -1,0 +1,10 @@
+.sub-title {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+@media (min-width: 980px) {
+  .sub-title {
+    max-width: 500px;
+  }
+}

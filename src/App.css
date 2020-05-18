@@ -1,94 +1,63 @@
-:root {
-  --lightyellow: #FFFCBF;
-  --cyan: #03D6D2;
-  --blue: #046FDB;
-  --darkblue: #062D92;
-}
-
 .app {
   padding: 0 15px;
-}
-
-.app-header {
-  padding: 30px 10px 10px;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.home-headline {
   position: relative;
-  border-bottom: 1px solid #343434;
+  clip-path: polygon(100% 100%, -200% 100%, 100% -200%);
 }
 
-.app-header::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: #575757;
-  bottom: -3px;
-  left: 0;
+.loading {
+  padding: 30px 10px;
+  font-weight: bold;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
 }
 
-.app-logo {
-  height: 30px;
-  width: 40px;
-  display: inline-flex;
-}
-
-.app-logo:hover {
+.loading__icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
   animation: rotations 2s ease infinite alternate-reverse;
 }
 
-.app-logo img {
-  width: 100%;
-  display: block;
+.article-wrapper {
+  line-height: 1.6;
+  margin-top: 30px;
 }
 
-@keyframes rotations {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.article-wrapper a {
+  border-bottom: 1px solid;
 }
 
-.header-nav {
+.article-wrapper a:hover {
+  border-bottom-color: transparent;
+}
+
+
+.avatar {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.links-list {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.header-nav__item {
-  color: var(--lightyellow);
-  text-decoration: none;
+.links-list a {
   display: inline-flex;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
-  position: relative;
-  z-index: 1;
 }
 
-.header-nav__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.header-nav__item::after {
-  content: '';
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--darkblue);
-  z-index: -1;
-  transition: bottom 200ms ease, background 300ms ease;
-}
-
-.header-nav__item--current::after {
-  background: var(--cyan);
-  bottom: 0;
-}
-
-.header-nav__item:hover::after {
-  bottom: 0;
-  background: var(--blue);
+.links-list a:not(:last-child) {
+  margin-right: 15px;
 }
