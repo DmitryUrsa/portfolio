@@ -9,7 +9,6 @@
 
 .home-headline {
   position: relative;
-  clip-path: polygon(100% 100%, -200% 100%, 100% -200%);
 }
 
 .loading {
@@ -40,7 +39,6 @@
   border-bottom-color: transparent;
 }
 
-
 .avatar {
   border-radius: 50%;
   width: 125px;
@@ -55,7 +53,7 @@
 .links-list a {
   display: inline-flex;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .links-list a:not(:last-child) {
